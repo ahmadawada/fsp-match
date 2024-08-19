@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEFA Matches</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>UEFA Matches Viewer</h1>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="url">API URL:</label>
+                <input type="text" id="url" value="https://match.pre.uefa.com/v5/matches">
+            </div>
+            <div class="form-group">
+                <label for="competitionId">Competition ID:</label>
+                <input type="text" id="competitionId" value="1">
+            </div>
+            <div class="form-group">
+                <label for="fromDate">From Date:</label>
+                <input type="date" id="fromDate" value="2024-08-01">
+            </div>
+
+            <div class="form-group">
+                <label for="toDate">To Date:</label>
+                <input type="date" id="toDate" value="2025-08-31">
+            </div>
+			        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="seasonYear">Season Year:</label>
+                <input type="text" id="seasonYear" value="2025">
+            </div>
+            <div class="form-group">
+                <label for="utcOffset">UTC Offset:</label>
+                <input type="text" id="utcOffset" value="3">
+            </div>
+
+            <div class="form-group">
+                <label for="offset">Offset:</label>
+                <input type="number" id="offset" value="0">
+            </div>
+            <div class="form-group">
+                <label for="limit">Limit:</label>
+                <input type="number" id="limit" value="250">
+            </div>
+        </div>
+
+        <button id="fetch-matches">Fetch Matches</button>
+        <div id="error-message" style="display: none; color: red; font-weight: bold;"></div>
+        <div id="loading-spinner" style="display: none;">Loading...</div>
+        <div id="matches-container"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

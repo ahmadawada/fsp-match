@@ -1,0 +1,337 @@
+/* Basic styling for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; /* Space between columns */
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Match display styling */
+.matchday {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.matchday h5 {
+    margin: 0;
+    font-size: 18px;
+    color: #0056b3;
+}
+
+.matchday-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 15px;
+}
+
+
+
+.round {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.round h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.day-group {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow:0 2px 4px #00080c;
+}
+
+.day-group h6 {
+    margin: 10px;
+    font-size: 15px;
+    color: #007bff;
+}
+
+.match {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.match:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.match-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+}
+
+.team-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.team-name {
+    font-size: 16px;
+}
+
+.match-score {
+    font-size: 18px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.match-time {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.match-winner {
+    margin-bottom: 10px;
+}
+
+.match-winner h6 {
+    margin: 0;
+    font-size: 16px;
+    color: #0056b3;
+}
+
+.match-winner img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.player-events {
+    margin-top: 10px;
+}
+
+.player-events h6 {
+    margin: 0;
+    font-size: 16px;
+    color: #0056b3;
+}
+
+.event {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.event-time {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.player-image {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.match-finished {
+    background-color: #d3d3d3;
+}
+
+.match-scheduled {
+    background-color: #d4edda;
+}
+
+.match-live {
+    background-color: #f8d7da;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .match {
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .match {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr; /* Stack form groups on smaller screens */
+    }
+}
+/* Popup Background */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Close Button */
+.close-popup {
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+}
+
+/* Event List */
+.events-list {
+    margin-top: 20px;
+}
+
+.event {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.event img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.event p {
+    margin: 0;
+}
+
+.event strong {
+    font-weight: bold;
+}
+
+.team-events {
+    margin-bottom: 20px;
+}
+
+.team-events h3 {
+    margin-top: 0;
+}
+
+.team-events .event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team-events img {
+    margin-right: 10px;
+}
+
+.team-logo {
+    width: 30px; /* Adjust the size as needed */
+    height: auto;
+    vertical-align: middle;
+}
